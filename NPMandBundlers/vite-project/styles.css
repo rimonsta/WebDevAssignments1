@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+svg {
+    display: none;
+    width: 20vw;
+    margin: auto;
+}
+
+body {
+    background: white;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    padding: 0.75rem; 
+    margin: 2 rem 0;
+}
+
+button {
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    width: 48%;
+    padding: 0.5rem;
+    color: black;
+    text-shadow: none;
+    display: inline-block;
+    align-items: flex-start;
+    background-color: white;
+    writing-mode: horizontal-tb !important;
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+    border-width: 1px;
+    border-style: outset;
+    border-color: black;
+    border-image: initial;
+}
+
+fieldset, .buttons {
+    display: none;
+}
+
+.materialImg {
+    display: none;
+}
+
+fieldset.active-step {
+    display: block;
+}
+
+.buttons.active-step {
+    display: flex;
+    margin: 0.5rem auto;
+    justify-content: space-between;
+}
+
+#first-btn {
+    flex-direction: row-reverse;
+}
+
+#formTitle {
+    text-align: center;
+} 
+
+#obit {
+    text-align: center;
+    display: none;
+}
+
+/* #ageObit {
+    margin-top: 0;
+} */
+
+#obitForm {
+    width: clamp(320px, 30%, 430px);
+    padding: 1.5rem;
+
+    /* The clamp() CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value. */
+} 
+
