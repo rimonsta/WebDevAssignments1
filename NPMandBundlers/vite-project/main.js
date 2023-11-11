@@ -1,6 +1,6 @@
 import './styles.css';
 
-console.log("this is working");
+console.log('this is working');
 
 const obitForm = document.obitForm;
 const itemName = document.getElementById('name');
@@ -25,6 +25,9 @@ const plantImg = document.getElementById("plantImg");
 const rockEarthImg = document.getElementById("rockEarthImg");
 const animalImg = document.getElementById("animalImg");
 const otherImg = document.getElementById("otherImg");
+
+age.addEventListener("input", showAge(this));
+color.addEventListener("input", changeColor(this.value));
 
 // the following code for progressive disclosure from: https://www.youtube.com/watch?v=JFfVilQSius
 
