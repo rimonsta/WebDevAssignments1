@@ -5,7 +5,8 @@ console.log('this is working');
 const obitForm = document.obitForm;
 const itemName = document.getElementById('name');
 const materialsNodeList = document.obitForm.material;
-const age = document.getElementById('age');
+const ageInput = document.getElementById('age');
+let age = ageInput.value;
 const levelOfHell = document.getElementById('level');
 const consequences = document.obitForm.consequences;
 const color = document.getElementById('color');
@@ -26,8 +27,12 @@ const rockEarthImg = document.getElementById("rockEarthImg");
 const animalImg = document.getElementById("animalImg");
 const otherImg = document.getElementById("otherImg");
 
-age.addEventListener("input", showAge(this));
-color.addEventListener("input", changeColor(this.value));
+ageInput.addEventListener("input", (event) => {
+    showAge(event.target.value);
+});
+color.addEventListener("input", (event) => {
+    changeColor(event.target.value);
+});
 
 // the following code for progressive disclosure from: https://www.youtube.com/watch?v=JFfVilQSius
 
@@ -161,7 +166,7 @@ function updateObit(){
             console.log(materialsNodeList[i].id);
         }
     }
-    console.log("age: " + age.value);
+    console.log("age: " + age);
     console.log("level of hell: " + levelOfHell.value);
     console.log("consequences: ");
     for (let i=0; i<consequences.length; i++){
@@ -221,7 +226,7 @@ function updateImages(materials){
 }
 
 function updateAgeObit(materialLifetime) {
-    if (age.value <  materialLifetime) {
+    if (age <  materialLifetime) {
         ageObit.innerHTML = "they died too soon";
     } else {
         ageObit.innerHTML = "they lived a full life";
