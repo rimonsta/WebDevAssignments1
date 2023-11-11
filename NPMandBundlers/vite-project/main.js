@@ -1,4 +1,4 @@
-import './styles.css'
+import './styles.css';
 
 console.log("this is working");
 
